@@ -30,7 +30,7 @@ general:
 dependencies:
   override:
     - echo $KEYFILE > /home/ubuntu/nodejs-docs-samples/key.json
-    - openssl aes-256-cbc -K $encrypted_fda0b707c7d5_key -iv $encrypted_fda0b707c7d5_iv -in /home/ubuntu/nodejs-docs-samples/key.json.enc -out /home/ubuntu/nodejs-docs-samples/key.json -d
+    - openssl aes-256-cbc -d -a -in /home/ubuntu/nodejs-docs-samples/key.json.enc -out /home/ubuntu/nodejs-docs-samples/key.json -d
     - echo $KEYFILE
     - cat /home/ubuntu/nodejs-docs-samples/key.json
     - gcloud auth activate-service-account --key-file /home/ubuntu/nodejs-docs-samples/key.json || true
