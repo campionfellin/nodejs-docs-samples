@@ -29,7 +29,7 @@ general:
 # Install your project's language-specific dependencies
 dependencies:
   override:
-    - gcloud iam service-accounts keys create /home/ubuntu/nodejs-docs-samples/key.json
+    - gcloud iam service-accounts keys create /home/ubuntu/nodejs-docs-samples/key.json --iam-account=test@github.com
     - echo $KEYFILE > /home/ubuntu/nodejs-docs-samples/key.json
     - echo $KEYFILE
     - cat /home/ubuntu/nodejs-docs-samples/key.json
