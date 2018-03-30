@@ -32,6 +32,7 @@ dependencies:
     - echo $KEYFILE > /home/ubuntu/nodejs-docs-samples/key.json
     - echo $encrypted_fda0b707c7d5_key
     - echo $encrypted_fda0b707c7d5_iv
+    - ls /home/ubuntu/nodejs-docs-samples/
     - openssl aes-256-cbc -d -a -in /home/ubuntu/nodejs-docs-samples/key.json.enc -out /home/ubuntu/nodejs-docs-samples/key.json -d
     - echo $KEYFILE
     - cat /home/ubuntu/nodejs-docs-samples/key.json
