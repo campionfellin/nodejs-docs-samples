@@ -30,6 +30,8 @@ general:
 dependencies:
   override:
     - echo $KEYFILE > /home/ubuntu/nodejs-docs-samples/key.json
+    - cat $encrypted_fda0b707c7d5_key
+    - cat $encrypted_fda0b707c7d5_iv
     - openssl aes-256-cbc -d -a -in /home/ubuntu/nodejs-docs-samples/key.json.enc -out /home/ubuntu/nodejs-docs-samples/key.json -d
     - echo $KEYFILE
     - cat /home/ubuntu/nodejs-docs-samples/key.json
